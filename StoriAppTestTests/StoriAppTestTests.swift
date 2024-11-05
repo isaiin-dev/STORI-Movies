@@ -6,7 +6,7 @@
 //
 
 import Testing
-@testable import StoriAppTest
+@testable import STORI_Movies
 
 struct StoriAppTestTests {
 

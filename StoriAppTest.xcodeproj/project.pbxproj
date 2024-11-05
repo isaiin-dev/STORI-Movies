@@ -24,9 +24,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AD9D483A2CD9735E0069AFA8 /* StoriAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoriAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9D483A2CD9735E0069AFA8 /* STORI Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STORI Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9D48502CD973610069AFA8 /* StoriAppTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriAppTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9D485A2CD973610069AFA8 /* StoriAppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriAppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADF834CA2CDAD53100E63634 /* StoriAppTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = StoriAppTest.xctestplan; path = ../StoriAppTest.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +89,7 @@
 		AD9D48312CD9735E0069AFA8 = {
 			isa = PBXGroup;
 			children = (
+				ADF834CA2CDAD53100E63634 /* StoriAppTest.xctestplan */,
 				AD9D483C2CD9735E0069AFA8 /* StoriAppTest */,
 				AD9D48532CD973610069AFA8 /* StoriAppTestTests */,
 				AD9D485D2CD973610069AFA8 /* StoriAppTestUITests */,
@@ -98,7 +100,7 @@
 		AD9D483B2CD9735E0069AFA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD9D483A2CD9735E0069AFA8 /* StoriAppTest.app */,
+				AD9D483A2CD9735E0069AFA8 /* STORI Movies.app */,
 				AD9D48502CD973610069AFA8 /* StoriAppTestTests.xctest */,
 				AD9D485A2CD973610069AFA8 /* StoriAppTestUITests.xctest */,
 			);
@@ -127,7 +129,7 @@
 			packageProductDependencies = (
 			);
 			productName = StoriAppTest;
-			productReference = AD9D483A2CD9735E0069AFA8 /* StoriAppTest.app */;
+			productReference = AD9D483A2CD9735E0069AFA8 /* STORI Movies.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AD9D484F2CD973610069AFA8 /* StoriAppTestTests */ = {
@@ -191,6 +193,7 @@
 					};
 					AD9D484F2CD973610069AFA8 = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
 						TestTargetID = AD9D48392CD9735E0069AFA8;
 					};
 					AD9D48592CD973610069AFA8 = {
@@ -294,16 +297,16 @@
 				INFOPLIST_FILE = StoriAppTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isaiindev.StoriAppTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "STORI Movies";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,16 +325,16 @@
 				INFOPLIST_FILE = StoriAppTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isaiindev.StoriAppTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "STORI Movies";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,18 +464,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZB68B8Y4GV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isaiindev.StoriAppTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "StoriAppTestTests/Interactors/StoriAppTestTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoriAppTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StoriAppTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STORI Movies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/STORI Movies";
 			};
 			name = Debug;
 		};
@@ -480,18 +486,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZB68B8Y4GV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isaiindev.StoriAppTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "StoriAppTestTests/Interactors/StoriAppTestTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoriAppTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StoriAppTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STORI Movies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/STORI Movies";
 			};
 			name = Release;
 		};

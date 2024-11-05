@@ -10,27 +10,49 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    var networkMonitor: NetworkMonitor?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        networkMonitor = NetworkMonitor()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        configureRootViewController()
+        
+        window?.overrideUserInterfaceStyle = .light
+        window?.makeKeyAndVisible()
+        
+        networkMonitor?.startMonitoring()
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        networkMonitor?.stopMonitoring()
     }
+    
+    private func configureRootViewController() {
+        // MARK: - ViewControllers
+        let homeViewController = HomeViewController()
+        let favoritesViewController = FavoritesViewController()
+        
+        // MARK: - NavigationControllers
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        homeNavigationController.tabBarItem = UITabBarItem(title: "Top Rated", image: UIImage(systemName: "film"), tag: 0)
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+        let favoritesNavigationController = UINavigationController(rootViewController: favoritesViewController)
+        favoritesNavigationController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "heart"), tag: 1)
+        
+        // MARK: - TabBarController
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [homeNavigationController, favoritesNavigationController]
+        tabBarController.configureTabBarAppearance()
+        
+        
+        // MARK: - WindowConfig
+        window?.rootViewController = tabBarController
     }
-
-
 }
 
